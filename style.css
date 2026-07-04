@@ -1,0 +1,257 @@
+﻿/* ===========================
+   Global Styles
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ===========================
+   Body
+=========================== */
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ===========================
+   Main Container
+=========================== */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* ===========================
+   Quiz Box
+=========================== */
+
+.quiz-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+/* ===========================
+   Top Bar
+=========================== */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   Progress Bar
+=========================== */
+
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #667eea;
+    transition: width 0.4s ease;
+}
+
+/* ===========================
+   Timer
+=========================== */
+
+.timer {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   Question
+=========================== */
+
+#question {
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   Answer Options
+=========================== */
+
+.option {
+    display: block;
+    background: #f3f3f3;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .option:hover {
+        transform: translateX(5px);
+        background: #dfe7ff;
+    }
+
+    .option input {
+        margin-right: 10px;
+    }
+
+/* ===========================
+   Buttons
+=========================== */
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+/* ===========================
+   Button Group
+=========================== */
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+    .button-group button {
+        flex: 1;
+    }
+
+/* ===========================
+   Result Section
+=========================== */
+
+#result {
+    text-align: center;
+}
+
+#score {
+    margin: 20px 0;
+}
+
+/* ===========================
+   Review Cards
+=========================== */
+
+.review-card {
+    background: #f5f5f5;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+    .review-card h3 {
+        margin-bottom: 10px;
+    }
+
+    .review-card p {
+        margin: 6px 0;
+    }
+
+/* ===========================
+   Hide Elements
+=========================== */
+
+.hide {
+    display: none;
+}
+
+/* ===========================
+   Dark Mode
+=========================== */
+
+.dark-mode {
+    background: #121212;
+}
+
+    .dark-mode .quiz-box {
+        background: #222;
+        color: white;
+    }
+
+    .dark-mode .option {
+        background: #333;
+        color: white;
+    }
+
+        .dark-mode .option:hover {
+            background: #444;
+        }
+
+    .dark-mode .review-card {
+        background: #333;
+        color: white;
+    }
+
+    .dark-mode input[type="radio"] {
+        accent-color: #667eea;
+    }
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width: 600px) {
+
+    .quiz-box {
+        padding: 20px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

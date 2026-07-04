@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Quiz Application</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Quiz Box -->
+        <div class="quiz-box">
+
+            <!-- Top Bar -->
+            <div class="top-bar">
+
+                <h1>🧠 Quiz Challenge</h1>
+
+                <button id="darkModeBtn">
+                    🌙 Dark Mode
+                </button>
+
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+            <!-- Timer -->
+            <div class="timer">
+                ⏱️ Time Left:
+                <span id="time">15</span>s
+            </div>
+
+            <!-- Quiz Section -->
+            <div id="quiz">
+
+                <!-- Question Number -->
+                <p id="question-number"></p>
+
+                <!-- Question -->
+                <h2 id="question"></h2>
+
+                <!-- Answer Options -->
+                <div id="answers"></div>
+
+                <!-- Navigation Buttons -->
+                <div class="button-group">
+
+                    <button onclick="previousQuestion()">
+                        ⬅ Previous
+                    </button>
+
+                    <button onclick="saveAnswer()">
+                        💾 Save
+                    </button>
+
+                    <button onclick="nextQuestion()">
+                        Next ➡
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Result Section -->
+            <div id="result" class="hide">
+
+                <h2>🎉 Quiz Completed!</h2>
+
+                <p id="score"></p>
+
+                <div class="button-group">
+
+                    <button onclick="showReview()">
+                        📋 Review Answers
+                    </button>
+
+                    <button onclick="restartQuiz()">
+                        🔄 Restart Quiz
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Review Section -->
+            <div id="reviewPage" class="hide">
+
+                <h2>📋 Review Answers</h2>
+
+                <div id="reviewContent"></div>
+
+                <br>
+
+                <button onclick="backToResult()">
+                    ⬅ Back to Result
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
